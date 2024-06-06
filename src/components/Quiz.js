@@ -11,9 +11,9 @@ const Quiz= ()=>{
          if(quizState.questions.length>0 || quizState.error){
              return;
          }
-        console.log("on init");
+        // console.log("on init");
         fetch(apiUrl).then(res=>res.json()).then(data=>{
-            console.log("data",data);
+            // console.log("data",data);
             dispatch({type:"LOADED_QUESTIONS",payload:data.results});
         }).catch((err)=>{
             // console.log(err)
